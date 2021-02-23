@@ -9,6 +9,13 @@ pipeline {
 
       }
     }
-
+    
+    stage('Build') {
+      steps {
+        timestamps() {
+          bat "gradlew.bat clean build -x test"
+        }
+      }
+    }
   }
 }
