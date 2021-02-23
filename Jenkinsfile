@@ -4,7 +4,7 @@ pipeline {
     stage('Source') {
       steps {
         timestamps() {
-          git(url: 'https://github.com/craneaura/hello-world.git', branch: 'master', changelog: true, poll: true, credentialsId: 'craneaura@github.com')
+          git(url: 'https://github.com/craneaura/hello-world.git', branch: 'pipeline', changelog: true, poll: true, credentialsId: 'craneaura@github.com')
         }
 
       }
